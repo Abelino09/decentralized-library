@@ -3,24 +3,14 @@ const port = process.env.HOST_PORT || 9090
 module.exports = {
   networks: {
     mainnet: {
-      privateKey: 'da146374a75310b9666e834ee4ad0866d6f4035967bfc76217c5a495fff9f0d0',
-      /*
-A better way is to read the privateKey from env, create a .env file (it must be gitignored) containing something like
-
-  export PRIVATE_KEY_MAINNET=4E7FECCB71207B867C495B51A9758B104B1D4422088A87F4978BE64636656243
-
-Then, run the migration with:
-
-  source .env && tronbox migrate --network mainnet
-
-*/
-      userFeePercentage: 100,
+      privateKey: '6b20b0d4bdc95b9ea4f8296c8376133c7d658fedea19c5f3d9655f631c5ff074',
+      userFeePercentage: 0,
       feeLimit: 1e9,
       fullHost: 'https://api.trongrid.io',
       network_id: '1'
     },
     shasta: {
-      privateKey: 'da146374a75310b9666e834ee4ad0866d6f4035967bfc76217c5a495fff9f0d0',
+      privateKey: '6b20b0d4bdc95b9ea4f8296c8376133c7d658fedea19c5f3d9655f631c5ff074',
       userFeePercentage: 50,
       feeLimit: 1e9,
       fullHost: 'https://api.shasta.trongrid.io',
@@ -35,11 +25,11 @@ Then, run the migration with:
     },
     development: {
       // For trontools/quickstart docker image
-      privateKey: 'da146374a75310b9666e834ee4ad0866d6f4035967bfc76217c5a495fff9f0d0',
-      userFeePercentage: 0,
+      privateKey: '46f7693480b8edbb9d45d6657ef98cd6f3232d0f0199ac53a351e1b685b4d0c3',
+      userFeePercentage: 100,
       feeLimit: 1e9,
-      fullHost: 'http://127.0.0.1:' + port,
-      network_id: '9'
+      fullHost: 'http://127.0.0.1:9090/jsonrpc',
+      network_id: '*'
     },
     compilers: {
       solc: {

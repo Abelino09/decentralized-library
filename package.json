@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "ganache-cli": "^6.5.1",
-    "nuxt": "^2.15.7"
+    "nuxt": "^2.15.7",
+    "tronweb": "^6.1.1"
   }
 }
